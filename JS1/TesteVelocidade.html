@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Velocidade</title>
+
+</head>
+<body>
+    <h1>Teste Velocidade</h1>
+</body>
+</html>
+
+<script>
+    const velocidade1= Number(prompt('Velocidade carro 1:'))
+    const velocidade2= Number(prompt('Velocidade carro 2:'))
+
+    let resultado=''
+
+    if(velocidade1 > velocidade2){
+        resultado = 'Carro 1 é mais rápido'
+    } else if(velocidade2> velocidade1){
+        resultado = 'Carro 2 é mais rápido'
+    } else {
+        resultado = 'Velocidades iguais.'
+    }
+
+    alert(resultado)
+
+</script>

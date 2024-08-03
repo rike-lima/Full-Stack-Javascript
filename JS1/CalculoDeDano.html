@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dano RPG</title>
+</head>
+
+<body>
+    <h1>Cálculo de Dano</h1>
+</body>
+
+</html>
+
+<script>
+    const nomeAtacante = prompt("Nome atacante:")
+    let poderAtaque = Number(prompt(`Poder de ataque de ${nomeAtacante}`))
+    const nomeDefensor = prompt("Nome defensor:")
+    let pontosDeVida = Number(prompt(`Pontos de vida de ${nomeDefensor}:`))
+    let poderDefesa = Number(prompt(`Poder de defesa de ${nomeDefensor}`))
+    let escudo = prompt(`${nomeDefensor} possui escudo?(S|N)`)
+
+    let dano = 0
+
+    if (poderAtaque >poderDefesa && escudo== "N"){
+        dano= poderAtaque-poderDefesa
+    } else if(poderAtaque>poderDefesa&& escudo=="S"){
+        dano= (poderAtaque-poderDefesa)/2
+    } 
+
+    pontosDeVida-= dano
+
+    alert(`RESUMO: \nAtacante: ${nomeAtacante} \nAtaque: ${poderAtaque}\nDefensor:${nomeDefensor}\nDefesa: ${poderDefesa} \nEscudo: ${escudo} \nPontos de vida atualizados: ${pontosDeVida}`)
+
+</script>
